@@ -1,3 +1,133 @@
+@import 'normalize.css';
+
 .header {
-    color: red;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+
+    .logo {
+        font-size: 24px;
+        font-weight: 700;
+    }
+
+    .nav-list {
+        display: flex;
+        justify-content: space-between;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+
+        &> li {
+            padding: 0 10px;
+            &>a {
+                text-decoration: none;
+                color: #1c1c1c;
+            }
+            &>a:hover {
+                color: #9FAFF1;
+            }
+        }
+        &> li.nav-cart {
+            display: block;
+            padding: 0 20px;
+            margin-left: 15px;
+            color: #ffffff;
+            background-color: #9FAFF1;
+            border-radius: 3px;
+            &>a {
+                color: #ffffff;
+                margin-left: 3px;
+            }
+        }
+    }
+    & > .nav-bars {
+        padding: 0 10px;
+        margin-left: 20px;
+        color: #ffffff;
+        background-color: #9FAFF1;
+        border-radius: 3px;
+        display: none;
+    }
+    & > .nav-bars:hover {
+        cursor: pointer;
+    }
+}
+.nav-list-mb {
+    background-color: #1c1c1c;
+    text-align: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: none;
+    position: fixed;
+    left: 0;
+    right: 0;
+    &> li {
+        padding: 4px 10px;
+        border-bottom: 1px solid #333;
+        &>a {
+            text-decoration: none;
+            color: #ffffff;
+        }
+        &>a:hover {
+            color: #9FAFF1;
+        }
+    }
+}
+
+@media (min-width: 1024px) { 
+    .nav-list-mb {
+        display: none !important;
+    }
+}
+
+@media (min-width: 577px) and (max-width: 1023px) { 
+    // .header {
+    //     display: flex;
+    //     align-items: center;
+
+    //     & > .logo {
+    //         flex: 4;
+    //     }
+
+    //     & > .nav-list .nav-item {
+    //         display: none;
+    //     }
+    //     & > .nav-bars {
+    //         display: block !important;
+    //     }
+    // }
+}
+
+@media (max-width: 576px) {
+    .container {
+        padding: 0 !important;
+    }
+    .header {
+        padding: 0 5px;
+        display: flex;
+        align-items: center;
+
+        & > .logo {
+            flex: 4;
+        }
+
+        & > .nav-list .nav-item {
+            display: none;
+        }
+        & > .nav-bars {
+            display: block !important;
+        }
+    }
+}
+
+
+@keyframes menuFadeIn {
+    from {
+        transform: translateY(-156px);
+    }
+    to {
+        transform: translateY(0)
+    }
 }
