@@ -1,10 +1,16 @@
-import React from 'react';
-import { Col, Row } from 'reactstrap';
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { Button, Col, NavLink, Offcanvas, OffcanvasBody, OffcanvasHeader, Row } from 'reactstrap';
 import './styles.scss';
 
 function ProductBanner() {
+    const [canvas, setCanvas] = useState(false);
+
+    const handleToggle = () => {
+        setCanvas(!canvas);
+    };
     return (
-        <div>
+        <div className="container">
             <Row>
                 <Col lg={4} className="banner-item">
                     <i className="fa fa-rocket" aria-hidden="true"></i>
