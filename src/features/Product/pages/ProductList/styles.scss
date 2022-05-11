@@ -2,9 +2,11 @@
     margin: 10px auto;
 }
 .loading {
-    position: relative;
+    position: absolute;
     top: 50%;
     left: 50%;
+    transform: translateY(-50%);
+    transform: translateX(-50%)
 }
 .banner {
     border-top: 1px solid rgb(241, 241, 241);
