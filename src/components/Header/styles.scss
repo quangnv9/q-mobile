@@ -45,7 +45,7 @@
     }
     .nav-bars {
         padding: 0 10px;
-        margin-left: 20px;
+        margin: 0 20px;
         color: #ffffff;
         background-color: #9FAFF1;
         border-radius: 3px;
@@ -55,38 +55,57 @@
         cursor: pointer;
     }
 }
-.nav-list-mb {
-    background-color: #1c1c1c;
-    text-align: center;
-    list-style-type: none;
-    margin: 0;
+.offcanvas-header {
+    padding: 1rem 2rem;
+}
+.offcanvas-body {
+    background-color: #2C292A;
     padding: 0;
-    display: none;
-    position: fixed;
-    left: 0;
-    right: 0;
-    &> li {
-        padding: 4px 10px;
-        border-bottom: 1px solid #333;
-        &>a {
-            text-decoration: none;
+
+    & > ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+
+        & > li {
+            padding: 10px 0;
+            border-bottom: 1px solid #212121;
             color: #ffffff;
         }
-        &>a:hover {
-            color: #9FAFF1;
+        & > li:hover {
+            background-color: #9FAFF1;
+            cursor: pointer;
+        }
+
+        & > li > a {
+            display: block;
+            text-decoration: none;
+            color: #ffffff;
         }
     }
 }
 
 // PC
 @media (min-width: 1024px) { 
-    .nav-list-mb {
-        display: none !important;
-    }
+    
 }
 
 // Tablet
-@media (min-width: 577px) and (max-width: 1023px) {}
+@media (min-width: 577px) and (max-width: 1023px) {
+    .container {
+        padding: 0;
+    }
+    .header {
+        & > .nav-list {
+            display: none;
+        }
+
+        & > .nav-bars {
+            display: block !important;
+        }
+    }
+}
 
 
 // Mobile
@@ -95,50 +114,15 @@
         padding: 0;
     }
     .header {
-        padding: 0 5px;
-        display: flex;
-        align-items: center;
-
-        & > .logo {
-            flex: 4;
-        }
-
-        & > .nav-list .nav-item {
+        & > .nav-list {
             display: none;
         }
+
         & > .nav-bars {
             display: block !important;
         }
     }
-    .offcanvas-header {
-        padding: 1rem 2rem;
-    }
-    .offcanvas-body {
-        background-color: #2C292A;
-        padding: 0;
-
-        & > ul {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            text-align: center;
-
-            & > li {
-                padding: 10px 0;
-                border-bottom: 1px solid #212121;
-                color: #ffffff;
-            }
-            & > li:hover {
-                background-color: #9FAFF1;
-                cursor: pointer;
-            }
-
-            & > li > a {
-                text-decoration: none;
-                color: #ffffff;
-            }
-        }
-    }
+    
 }
 
 

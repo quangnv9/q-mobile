@@ -22,11 +22,10 @@
 }
 
 .categories-mb {
-    display: none;
     background-color: #2C292A;
     padding: 10px;
 
-    & > .nav-bars {
+    .nav-bars {
         background-color: #9FAFF1;
         border-radius: 2px;
         margin: 0 auto;
@@ -54,6 +53,28 @@
     }    
 }
 
+// PC
+@media (min-width: 1024px) { 
+    .categories-mb {
+        display: none !important;
+    }
+}
+
+// Tablet
+@media (min-width: 577px) and (max-width: 1023px) {
+    .categories {
+        display: none;
+    }
+    .categories-mb {
+        display: block;
+
+        & > .nav-bars {
+            display: block !important;
+        }
+    }
+}
+
+// Mobile
 @media (max-width: 576px) {
     .categories {
         display: none;
