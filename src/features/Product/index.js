@@ -5,7 +5,13 @@ import ProductList from './pages/ProductList/ProductList';
 ProductFeature.propTypes = {};
 
 function ProductFeature(props) {
-    return <div></div>;
+    return (
+        <div>
+            <Routes>
+                <Route path="*" element={<ProductList />} />
+            </Routes>
+        </div>
+    );
 }
 
 export default ProductFeature;

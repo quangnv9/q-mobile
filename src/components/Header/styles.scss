@@ -7,6 +7,7 @@
     height: 70px;
 
     .logo {
+        padding: 0 10px;
         font-size: 24px;
         font-weight: 700;
     }
@@ -20,6 +21,7 @@
 
         &> li {
             padding: 0 10px;
+
             &>a {
                 text-decoration: none;
                 color: #1c1c1c;
@@ -41,7 +43,7 @@
             }
         }
     }
-    & > .nav-bars {
+    .nav-bars {
         padding: 0 10px;
         margin-left: 20px;
         color: #ffffff;
@@ -49,7 +51,7 @@
         border-radius: 3px;
         display: none;
     }
-    & > .nav-bars:hover {
+    .nav-bars:hover {
         cursor: pointer;
     }
 }
@@ -76,33 +78,21 @@
     }
 }
 
+// PC
 @media (min-width: 1024px) { 
     .nav-list-mb {
         display: none !important;
     }
 }
 
-@media (min-width: 577px) and (max-width: 1023px) { 
-    // .header {
-    //     display: flex;
-    //     align-items: center;
+// Tablet
+@media (min-width: 577px) and (max-width: 1023px) {}
 
-    //     & > .logo {
-    //         flex: 4;
-    //     }
 
-    //     & > .nav-list .nav-item {
-    //         display: none;
-    //     }
-    //     & > .nav-bars {
-    //         display: block !important;
-    //     }
-    // }
-}
-
+// Mobile
 @media (max-width: 576px) {
     .container {
-        padding: 0 !important;
+        padding: 0;
     }
     .header {
         padding: 0 5px;
@@ -118,6 +108,35 @@
         }
         & > .nav-bars {
             display: block !important;
+        }
+    }
+    .offcanvas-header {
+        padding: 1rem 2rem;
+    }
+    .offcanvas-body {
+        background-color: #2C292A;
+        padding: 0;
+
+        & > ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+
+            & > li {
+                padding: 10px 0;
+                border-bottom: 1px solid #212121;
+                color: #ffffff;
+            }
+            & > li:hover {
+                background-color: #9FAFF1;
+                cursor: pointer;
+            }
+
+            & > li > a {
+                text-decoration: none;
+                color: #ffffff;
+            }
         }
     }
 }

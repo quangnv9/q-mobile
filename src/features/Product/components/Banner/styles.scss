@@ -1,0 +1,31 @@
+.banner-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 0;
+
+    & > i {
+        font-size: 30px;
+        margin-right: 5px;
+    }
+    & > p {
+        margin: 0;
+        font-size: 16px;
+        font-weight: 300
+    }
+}
+// PC
+@media (min-width: 1024px) { 
+    .banner-item.center {
+        border-right: 1px solid rgb(241, 241, 241);
+        border-left: 1px solid rgb(241, 241, 241);
+    }
+}
+
+// Mobile
+@media (max-width: 576px) {
+    .banner-item.center {
+        border-top: 1px solid rgb(241, 241, 241);
+        border-bottom: 1px solid rgb(241, 241, 241);
+    }
+}
